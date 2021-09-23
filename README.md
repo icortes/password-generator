@@ -14,8 +14,16 @@ No installation required.
 
 ### Snapshot of Web Page
 
-![image of webpage](/assets/img/Screenshot.jpg)
+![image of web page](/assets/img/Screenshot.jpg)
 
+### Gif of Web Page
+
+![gif of web page](/assets/img/example.gif)
+
+## Lessons Learned
+
+* write out your program in pseudo code first
+* when you are stuck, take a small break and come back later
 
 ## Built With
 
