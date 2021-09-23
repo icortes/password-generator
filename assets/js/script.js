@@ -25,10 +25,10 @@ function generatePassword() {
   if (pwLength >= 8 && pwLength <= 128) {
 
     //ask if you want to include lowercase, uppercase, numeric, and/or special characters
-    var boolLowerCase = confirm("Press Ok if you want to include lowercase.");
-    var boolUpperCase = confirm("Press Ok if you want to include uppercase.");
-    var boolNumeric = confirm("Press Ok if you want to include numbers.");
-    var boolSpecialChar = confirm("Press Ok if you want to include special characters.");
+    var boolLowerCase = confirm("Press Ok if you want to include lowercase.\nPress Cancel if not.");
+    var boolUpperCase = confirm("Press Ok if you want to include uppercase.\nPress Cancel if not.");
+    var boolNumeric = confirm("Press Ok if you want to include numbers.\nPress Cancel if not.");
+    var boolSpecialChar = confirm("Press Ok if you want to include special characters.\nPress Cancel if not.");
 
     //if user selects at least one character type then continue the program
     //else exits the function and tells you to try again
