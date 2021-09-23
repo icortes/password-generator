@@ -1,36 +1,20 @@
-# Project Title
+# 03 Javascript: Password Generator
 
-One paragraph of project description goes here.
+This web app will generate a random password for the user. The user will get a prompt to set the length of the password, anywhere from 8 to 128. The user will have the option to select uppercase, lowercase, numbers, and/or special characters. At least one character type must be selected or the app will ask to try again. The user then will be given a unique password based on the options chosen.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
 ### Prerequisites
 
-What things you need to install the software and how to install them.
-
-```
-Give examples
-```
+* Web Browser required
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development environment running.
+No installation required.
 
-Say what the step will be:
+### Snapshot of Web Page
 
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo.
+![image of webpage](/assets/img/Screenshot.jpg)
 
 
 ## Built With
@@ -41,18 +25,16 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## Deployed Link
 
-* [See Live Site](#)
+* [See Live Site](https://icortes.github.io/password-generator/)
 
 
 ## Authors
 
-* **YOUR NAME** 
+* **Isaac Cortes Hernandez** 
 
-- [Link to Portfolio Site](#)
-- [Link to Github](https://github.com/)
-- [Link to LinkedIn](https://www.linkedin.com/)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+- [Link to Portfolio Site](https://icortes.github.io/my-first-portfolio/)
+- [Link to Github](https://github.com/icortes)
+- [Link to LinkedIn](https://www.linkedin.com/in/cortes-isaac)
 
 ## License
 
@@ -60,6 +42,5 @@ This project is licensed under the MIT License
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code, libraries, packages, or UI was used  / inspired from
-* Inspiration
-* etc
+* w3schools.com
+* developer.mozilla.org
