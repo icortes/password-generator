@@ -33,7 +33,7 @@ function generatePassword() {
     //if user selects at least one character type then continue the program
     //else exits the function and tells you to try again
     if (boolLowerCase || boolUpperCase || boolNumeric || boolSpecialChar) {
-      //adds all the criteria the user wants into an array
+      //adds all the criteria the user wants into a bigger library array
       var bigLibrary = [];
       if (boolLowerCase) {
         bigLibrary = bigLibrary.concat(getLowerCase());
@@ -47,10 +47,13 @@ function generatePassword() {
       if (boolSpecialChar) {
         bigLibrary = bigLibrary.concat(getSpecial());
       }
+      console.log(bigLibrary);
       //loop with pwLength to add character to password
       for (var i = 0; i < pwLength; i++) {
-        password = password.concat(bigLibrary[Math.random() * bigLibrary.length]);
+        password = password + bigLibrary[Math.random() * bigLibrary.length];
+        console.log(password);
       }
+      return password;
     }
 
     return "Please select at least one character type.\nTry Again!";
