@@ -30,19 +30,26 @@ function generatePassword() {
     var boolNumeric = confirm("Press Ok if you want to include numbers.");
     var boolSpecialChar = confirm("Press Ok if you want to include special characters.");
 
-    //adds all the values into an array
-    //if validate has at least one character type then continue the program
+    //if user selects at least one character type then continue the program
     //else exits the function and tells you to try again
-    var validate = [boolLowerCase, boolUpperCase, boolNumeric, boolSpecialChar];
-
-    if (validate[0] || validate[1] || validate[2] || validate[3]) {
-
+    if (boolLowerCase || boolUpperCase || boolNumeric || boolSpecialChar) {
+      //adds all the criteria the user wants into an array
+      var bigLibrary = [];
+      if (boolLowerCase) {
+        bigLibrary = bigLibrary.concat(getLowerCase());
+      }
+      if (boolUpperCase) {
+        bigLibrary = bigLibrary.concat(getUpperCase());
+      }
+      if (boolNumeric) {
+        bigLibrary = bigLibrary.concat(getNumbers());
+      }
+      if (boolSpecialChar) {
+        bigLibrary = bigLibrary.concat(getSpecial());
+      }
       //loop with pwLength to add character to password
       for (var i = 0; i < pwLength; i++) {
-        //make random number to select character type based on the validate number
-        var randNum = Math.floor(Math.random() * validate);
-
-
+        password = password.concat(bigLibrary[Math.random() * bigLibrary.length]);
       }
     }
 
@@ -55,25 +62,28 @@ function generatePassword() {
 
 }
 
-//returns a random lowercase, uppercase, number, or spacial character
-function getNewLowerCase() {
+
+
+//returns a lowercase alphabet
+function getLowerCase() {
   var lowerCaseAlphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-  return lowerCaseAlphabet[Math.floor(Math.random() * lowerCaseAlphabet.length)];
+  return lowerCaseAlphabet;
 }
 
-//returns a random uppercase letter
-function getNewUpperCase() {
-  var upperCaseAlphabet = [];
-  return upperCaseAlphabet[Math.floor(Math.random() * upperCaseAlphabet.length)];
+//returns an uppercase alphabet
+function getUpperCase() {
+  var upperCaseAlphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+  return upperCaseAlphabet;
 }
 
-//returns a random number from 0 to 9
-function getNewNumber() {
-  return Math.floor(Math.random() * 10);
+//returns numbers 0 to 9
+function getNumbers() {
+  var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+  return numbers;
 }
 
-//return random special character
-function getSpacial() {
+//returns special character library
+function getSpecial() {
   var specialCharacter = ["!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"];
-  return specialCharacter[Math.floor(Math.random() * specialCharacter.length)];
+  return specialCharacter;
 }
