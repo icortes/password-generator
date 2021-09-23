@@ -50,8 +50,8 @@ function generatePassword() {
       console.log(bigLibrary);
       //loop with pwLength to add character to password
       for (var i = 0; i < pwLength; i++) {
-        password = password + bigLibrary[Math.random() * bigLibrary.length];
-        console.log(password);
+        password = password + bigLibrary[Math.floor(Math.random() * bigLibrary.length)];
+        //console.log(password);
       }
       return password;
     }
